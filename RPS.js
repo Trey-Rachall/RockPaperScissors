@@ -29,7 +29,7 @@ const Rock = document.querySelector('#buttonRock');
     buttonRock.addEventListener('click', (e) => {
         playerSelection = 'rock';
         const computerSelection = getComputerChoice();
-         return playRound(playerSelection, computerSelection);
+         console.log(playRound(playerSelection, computerSelection));
          console.log(playerScore, computerScore)
          console.log(winGame());
          
@@ -57,9 +57,10 @@ const Scissors = document.querySelector('#buttonScissors');
          
      });
 
-const results = document.getElementById('results');
-
-
+const results = document.querySelector('#results');
+     results.textContent = ''
+const score = document.querySelector('#score');
+    
 
  
 function winGame() {
@@ -74,10 +75,7 @@ function winGame() {
         
         
 
-   //if(document.getElementById('buttonRock').clicked == true) {
-    //    playerSelection = 'rock';
-    // }
-    
+   
 
   
 
